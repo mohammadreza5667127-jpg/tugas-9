@@ -1,3 +1,12 @@
+
+<?php
+session_start();
+if (!isset($_SESSION['login'])) {
+  echo "<script>alert('Silakan login terlebih dahulu');window.location='login.php';</script>";
+  exit;
+}
+?>
+
 <?php
 include 'koneksi.php';
 $id = $_GET['id'];
